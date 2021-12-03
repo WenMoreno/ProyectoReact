@@ -1,12 +1,14 @@
 
 import './App.css';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar';
 
-function App() {
+const App=()=> {
   return (
-    <div className="App">
+   <header>
     <NavBar/>
-    </div>
+    <ItemListContainer greeting='soy un componente del e-commerce'/>
+    </header>
   );
 }
 

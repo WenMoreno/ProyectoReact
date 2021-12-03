@@ -1,9 +1,10 @@
-import{Navbar, Nav, Container, NavDropdown} from 'react-bootstrap';
+import{Navbar, Nav, Container, NavDropdown, Form, FormControl, Button} from 'react-bootstrap';
+import CartWidget from './CartWidget';
 
 const NavBar =() =>{
     return(
         <div>
-   <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+   <Navbar collapseOnSelect expand="lg" className="color-nav" variant="light">
   <Container>
   <Navbar.Brand href="#home">MI TIENDA ONLINE</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -19,10 +20,16 @@ const NavBar =() =>{
       </NavDropdown>
     </Nav>
     <Nav>
-      <Nav.Link href="#Usuario">Usuario</Nav.Link>
-      <Nav.Link eventKey={2} href="#Carrito">
-        Carrito
-      </Nav.Link>
+    <Form className="d-flex">
+        <FormControl
+          type="search"
+          placeholder="¿Qué estás buscando?"
+          className="me-2"
+          aria-label="Search"
+        />
+        <Button className="boton" variant="outline-success" >Buscar</Button>
+      </Form>
+      <CartWidget/>
     </Nav>
   </Navbar.Collapse>
   </Container>

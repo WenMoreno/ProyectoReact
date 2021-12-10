@@ -8,12 +8,13 @@ const App=()=> {
   const inicial=1;
   const stock=10;
   return (
+   <>
    <header>
-    <NavBar/>
-    <ItemListContainer greeting='soy un componente del e-commerce'/>
-    <ItemCount inicial={inicial} stock={stock}/>
-
+      <NavBar />
     </header>
+    <ItemListContainer greeting='soy un componente del e-commerce' />
+    <ItemCount inicial={inicial} stock={stock} />
+    </>
   );
 }
 

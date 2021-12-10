@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 
 const ItemCount = ({ inicial, stock})=> {
  const [value,setValue]  = useState(inicial)
+
+
+ 
     const handleResta = (num)=> {
         if (value > inicial) {
             setValue(value -num)

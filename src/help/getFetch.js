@@ -1,6 +1,6 @@
 
 const productos= [ 
-{id:1, nombre:'remer' ,categoria:'remeras', precio:1000}
+{id:1, nombre:'remera' , categoria:'remeras', precio:1000}
 
 ];
 

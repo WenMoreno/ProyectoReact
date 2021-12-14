@@ -7,13 +7,14 @@ import NavBar from './components/NavBar';
 const App=()=> {
   const inicial=1;
   const stock=10;
+  const onAdd= 0;
   return (
    <>
    <header>
       <NavBar />
     </header>
     <ItemListContainer greeting='soy un componente del e-commerce' />
-    <ItemCount inicial={inicial} stock={stock} />
+    <ItemCount inicial={inicial} stock={stock} onAdd={onAdd} />
     </>
   );
 }

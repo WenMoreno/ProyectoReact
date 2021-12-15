@@ -1,7 +1,6 @@
 
 const productos= [ 
-{id:1, nombre:'remera' , categoria:'remeras', precio:1000}
-
+{id:1, nombre:'Mouse Logitech G Series Lightsync G203 negro' , categoria:'Mouse', precio:2300, descripcion:'soy un mouse'}
 ];
 
 const getFetch = new Promise( (resolve) => {

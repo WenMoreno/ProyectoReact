@@ -13,10 +13,11 @@ const NavBar =() =>{
       <Nav.Link href="#Inicio">Inicio</Nav.Link>
       <Nav.Link href="#Sale">Sale</Nav.Link>
       <NavDropdown title="Productos" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#Jeans/3.1">Jeans</NavDropdown.Item>
-        <NavDropdown.Item href="#Remeras/3.2">Remeras</NavDropdown.Item>
-        <NavDropdown.Item href="#Abrigos/3.3">Abrigos</NavDropdown.Item>
-        <NavDropdown.Item href="#Camisas/3.4">Camisas</NavDropdown.Item>
+        <NavDropdown.Item href="#Teclado/3.1">Teclado</NavDropdown.Item>
+        <NavDropdown.Item href="#Mouse/3.2">Mouse</NavDropdown.Item>
+        <NavDropdown.Item href="#Microprocesador/3.3">Microprocesador</NavDropdown.Item>
+        <NavDropdown.Item href="#Mother/3.4">Mother</NavDropdown.Item>
+        <NavDropdown.Item href="#Auriculares/3.5">Auriculares</NavDropdown.Item>
       </NavDropdown>
     </Nav>
     <Nav>

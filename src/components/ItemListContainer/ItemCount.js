@@ -1,36 +1,35 @@
 import React, {useState} from 'react'
 
 
+const ItemCount = ({ stock=14 })=> {
+    
+ const [valor,setValor]  = useState(1)
 
-const ItemCount = ({ inicial, stock, onAdd})=> {
- const [value,setValue]  = useState(inicial)
- const [agregar,setAgregar] = useState(onAdd)
 
 
-    const handleResta = (num)=> {
-        if (value > inicial) {
-            setValue(value -num)
+    const handleResta = ()=> {
+        if (valor > 1) {
+            setValor(valor -1)
         }
     };
      
-    const handleSuma = (num)=> {
-        value < stock ? setValue(value +num) : alert('no hay mas stock') 
+    const handleSuma = ()=> {
+        valor < stock && setValor(valor +1) 
     };
 
-    const addCarrito= (num)=> {
-         if (num<= stock ) { 
-            setAgregar(num) 
-         } 
+    const addCarrito= ()=> {
+     alert(`agregaste ${valor} al carrito`)
     };
 
     return (
         <div>
-            <h1> {value} </h1>
+            <h1> {valor} </h1>
             <button onClick={()=>handleResta(1)}>-</button>
-            <button disabled={value===stock} onClick={()=>handleSuma(1)}>+</button>
-            <button onClick={()=>addCarrito(value)}>Agregar al carrito</button>
+            <button disabled={valor===stock} onClick={()=>handleSuma(1)}>+</button>
+            <button onClick={()=>addCarrito()}>Agregar al carrito</button>
         </div>
     );
+
       
 
     

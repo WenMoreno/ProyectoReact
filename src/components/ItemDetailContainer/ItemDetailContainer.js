@@ -1,23 +1,29 @@
 import { useState, useEffect } from "react";
-import getFetch from "../../help/getFetch";
+import  getFetch  from "../../help/getFetch";
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
-    const [item,setItem]= useState([]);
+    const [prod,setProd]= useState({})
+    const [cargando, setCargando] = useState(true)
 
-    useEffect((id) => {
+   useEffect(() => {
         getFetch
-        .then((resp) => {
-            setItem(resp.find((prod)=> prod.id===parseInt(id)));  
-        } )
-    }, []);
+            .then(resp => setProd(resp.find(prod => prod.id === parseInt(prod.id)))) 
+            .catch(err => console.log(err))
+            .finally(()=>setCargando(false))})
+
+
     return (
-        <div>
-    <ItemDetail item={item} /> 
+        <>
+            {cargando ? <h2>Cargando...</h2> :
+            
+       <div>
+    <ItemDetail prod={prod} /> 
     
         </div>
-     
+            }
+     </>
     )
-}
+        }
 
 export default ItemDetailContainer

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import ItemList from "./ItemList"
 import getFetch from "../../help/getFetch"
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
+
 
 
 const ItemListContainer=({greeting})=> {
@@ -22,9 +22,7 @@ const ItemListContainer=({greeting})=> {
         {cargando ? <h1>Cargando...</h1> : 
         <ItemList productos={productos} />
         }
-
-    <ItemDetailContainer/>
-    </section> 
+     </section> 
     ) }
 
 export default ItemListContainer

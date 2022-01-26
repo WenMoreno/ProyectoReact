@@ -1,17 +1,30 @@
-
+import { useState } from "react";
+import { Button } from "bootstrap";
 import ItemCount from "../ItemListContainer/ItemCount";
-
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({prod}) => {
+    const [carrito, setCarrito] = useState(true);
+
+    const onAdd = (valor) => {
+console.log(valor)
+setCarrito(false)
+    }
+
     return (
         <div>
          <h1>{prod.nombre}</h1>  
          <p>{prod.precio}</p> 
         <p>{prod.descripcion}</p>
           <img  width="170" height="170" src='https://http2.mlstatic.com/D_NQ_NP_781312-MLA45385798113_032021-O.webp'/>
-         <ItemCount/>
+
+          {carrito ? (<ItemCount stock={prod.stock} onAdd={onAdd} />) :
+          (
+            <Link to={'/cart'} > <button>Ir al carrito</button> </Link>  
+          )}
+         
          </div>
 )
-}
+};
 
  export default ItemDetail

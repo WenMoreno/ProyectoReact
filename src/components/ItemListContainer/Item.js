@@ -26,7 +26,7 @@ ${prod.descripcion} `}
 </Card>
  </div>
         
-    )
-}
+    );
+};
 
 export default Item

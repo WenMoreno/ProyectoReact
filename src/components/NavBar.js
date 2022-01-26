@@ -18,7 +18,7 @@ const NavBar =() =>{
         <NavDropdown.Item><Link to="/categoria/mouse">Mouse</Link></NavDropdown.Item> 
         <NavDropdown.Item><Link to="/detalle">Microprocesador</Link></NavDropdown.Item> 
         <NavDropdown.Item><Link to="/detalle">Mother</Link></NavDropdown.Item> 
-        <NavDropdown.Item><Link to="/detalle">Auriculares</Link></NavDropdown.Item> 
+        <NavDropdown.Item><Link to="/categoria/auricular">Auriculares</Link></NavDropdown.Item> 
       </NavDropdown>
     </Nav>
     <Nav>

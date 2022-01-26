@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, Router } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import './App.css';
 import Cart from './components/Cart';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';

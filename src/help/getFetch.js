@@ -2,21 +2,21 @@
 const productos= [ 
 {  id:1,
     nombre:'Mouse Logitech G Series Lightsync G203 negro' ,
-     categoria:'Mouse', 
+     categoria:'mouse', 
      precio:2300, 
    descripcion:'soy un mouse',
 },
 {  id:2,
     nombre:'Mouse Logitech G Series Lightsync G203 negro' ,
-     categoria:'Mouse', 
+     categoria:'teclado', 
      precio:2500, 
-   descripcion:'soy un mouse',
+   descripcion:'soy un teclado',
 },
 {  id:3,
     nombre:'Mouse Logitech G Series Lightsync G203 negro' ,
-     categoria:'Mouse', 
+     categoria:'auricular', 
      precio:3000, 
-   descripcion:'soy un mouse',
+   descripcion:'soy un auri',
 }
 ];
 

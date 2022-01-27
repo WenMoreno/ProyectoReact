@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useState} from "react";
 import { Button } from "bootstrap";
 import ItemCount from "../ItemListContainer/ItemCount";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../context/CartContext";
 
 const ItemDetail = ({prod}) => {
     const [carrito, setCarrito] = useState(true);
 
+    const { cartLista, agregarAlCarrito} = useCartContext()
+
     const onAdd = (valor) => {
 console.log(valor)
 setCarrito(false)
+agregarAlCarrito({...prod, valor:valor})
     }
+    console.log(cartLista)
 
     return (
         <div>

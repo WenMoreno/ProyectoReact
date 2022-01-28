@@ -24,6 +24,19 @@ const CartContextProvider = ({children}) => {
           }
       }
 
+      const listadoProd= () => {
+        
+
+      }
+
+      const precioTotal = () => {
+        return cartLista.reduce((juntar, prod) => juntar+ (prod.valor*prod.precio), 0)
+      }
+
+      const eliminarProducto = (id) => {
+        setCartLista(cartLista.filter(prod=> prod.id !==id))
+      }
+
 
     const eliminarCarrito = () => {
         setCartLista([])
@@ -33,7 +46,9 @@ const CartContextProvider = ({children}) => {
     return (
         <CartContext.Provider value={{cartLista,
             agregarAlCarrito,
-            eliminarCarrito
+            eliminarCarrito,
+            eliminarProducto,
+            precioTotal
         
         }}>
            {children}
@@ -44,3 +59,5 @@ const CartContextProvider = ({children}) => {
 
 
 export default CartContextProvider;
+
+

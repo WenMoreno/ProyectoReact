@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import ItemList from "./ItemList"
 import getFetch from "../../help/getFetch"
+import {doc, getDoc}from 'firebase/firestore'
 
 
 
